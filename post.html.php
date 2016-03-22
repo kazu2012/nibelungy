@@ -11,6 +11,7 @@
         <?php } ?>
         <div class="post-meta"><time><?php echo date('d.m.Y', $p->date) ?></time></div>
     </header>
+<div style="text-align: justify">
     <?php if (!empty($p->image)) { ?>
         <div class="featured featured-image">
             <img itemprop="image" width="100%" src="<?php echo $p->image; ?>" alt="<?php echo $p->title ?>"/>
@@ -87,4 +88,5 @@
             <?php endif; ?>
         </nav>
     <?php endif; ?>
+</div>
 </article>

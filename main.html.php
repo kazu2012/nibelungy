@@ -10,6 +10,7 @@
         <?php } ?>
         <div class="post-meta"><time><?php echo date('d.m.Y', $p->date) ?></time></div>
     </header>
+<div style="text-align: justify">
     <?php if (!empty($p->image)) { ?>
         <div class="featured featured-image">
             <a href="<?php echo $p->url; ?>"><img itemprop="image" width="100%" src="<?php echo $p->image; ?>" alt="<?php echo $p->title ?>"/></a>
@@ -34,6 +35,7 @@
         <?php echo get_teaser($p->body, $p->url); ?>
         <?php if (config('teaser.type') === 'trimmed'):?><p class="readmore"><a href="<?php echo $p->url; ?>">Read this article <i class="fa fa-chevron-circle-right"></i></a></p><?php endif;?>
     </section>
+</div>
 </article>
 <?php endforeach;?>
 <?php if (!empty($pagination['prev']) || !empty($pagination['next'])): ?>
